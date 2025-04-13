@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:17.3
+    container_name: postgres-nba
+    environment:
+      POSTGRES_USER: nba
+      POSTGRES_PASSWORD: nba
+      POSTGRES_DB: nba
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  spark:
+    image: jupyter/pyspark-notebook
+    container_name: spark-nba
+    environment:
+      - SPARK_MODE=master
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+    depends_on:
+      - postgres
+
+volumes:
+  pgdata:
+
+    

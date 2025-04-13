@@ -1,3 +1,17 @@
+Hiérarchie des dossiers 
+
+Devoir_NBA-n_3/
+├── data/                        # Données brutes ou nettoyées
+├── documentation/              # Docs techniques, rapports, etc.
+├── notebook/                   # Notebooks Jupyter (.ipynb)
+├── test/                       # Scripts de test                   
+│   └── Docker_PostgreSQL_Pyspark/
+│       └── docker-compose.yml  # Fichier de configuration des conteneurs
+          etc
+├── utils/    
+
+
+
 Vérifier si Docker est bien installé
 ````bash
 docker --version

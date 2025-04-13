@@ -1,16 +1,18 @@
 Hiérarchie des dossiers 
 
+```
 Devoir_NBA-n_3/
-├── data/                        # Données brutes ou nettoyées
-├── documentation/              # Docs techniques, rapports, etc.
-├── notebook/                   # Notebooks Jupyter (.ipynb)
-├── test/                       # Scripts de test                   
+├── data/                           # Données brutes ou nettoyées
+├── documentation/                  # Documentation technique, rapports, etc.
+├── notebook/                       # Notebooks Jupyter (.ipynb)
+├── test/                           # Scripts de test et de validation
 │   └── Docker_PostgreSQL_Pyspark/
-│       └── docker-compose.yml  # Fichier de configuration des conteneurs
-          etc
-├── utils/    
-
-
+│       ├── docker-compose.yml      # Configuration des conteneurs Docker
+│       └── ...                     # Autres fichiers Docker/PySpark
+├── utils/                          # Fonctions utilitaires (nettoyage, export, etc.)
+└── Docker/                         # Configurations Docker générales
+    └── Dockerfile                  # Fichier Docker principal (si présent)
+```
 
 Vérifier si Docker est bien installé
 ````bash
@@ -60,4 +62,3 @@ Arrêter un conteneur actif
 ````bash
 docker stop nom_du_conteneur
 ````
-Test
